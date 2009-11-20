@@ -1,0 +1,298 @@
+\documentclass{report}
+
+\usepackage{graphicx}
+\usepackage{ngerman}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{subfigure}
+%Nun kann mit \begin{figure}[H] ein Bild GENAU an diese Stelle gesetzt werden..
+
+
+\title{Elektrische Messung an einem Ferroelektrikum}
+\author{Chiara Leonhardt \and Claus M\"uller-Gatermann \and Kilian Barth}
+
+\begin{document}
+
+	\maketitle
+	\newpage 
+
+	\tableofcontents
+	\newpage
+
+	\chapter{Vorbereitung}
+		\section{Ferroelektrizit\"at und der ferroelektrische\\Phasen\"ubergang}
+		
+		\subsection{Zusammenhang zwischen $P$ und $E$}
+		Legt man ein elektrisches Feld an einen Isolator an, so wird dieser polarisiert durch Erzeugung/Ausrichtung von Dipolen. 
+		Der Zusammenhang zwischen elektrischer Polarisation und dem elektrischen Feld im Dielektrikum ist gegeben durch die Formel 
+		\begin{equation*}
+			P=(\epsilon - 1) \epsilon_0 E
+		\end{equation*}
+		Dabei ist $(\epsilon - 1) = \chi$ die Suszeptibilit\"at und $\epsilon_0$ die Dielektrizit\"atskonstante ($DK$). $DK$ ist definiert
+		als der Quotient der Kapazit\"aten eines Plattenkondensators mit und ohne Dielektrikum (ohne Vakuum).
+		Polarisation ist das Dipolmoment pro Volumeneinheit.
+	
+		\subsection{Hystereseverhalten}
+		Die Hysteresekurve ist der Graph von $P$ gegen $E$ aufgetragen. 
+		Verschiedene Arten von Isolatoren zeigen unterschiedliches Hystereseverhalten. Uns interessieren besonders die Isolatoren,
+		die folgende (Abb. \ref{img_hysterese}) Hysteresekurve aufweisen.
+	\begin{figure}[htb]
+		\center\includegraphics[width=200pt,height=206pt]{Hysterese}
+		\caption{Ferroelektrische Hysteresekurve} 
+		\label{img_hysterese}
+	\end{figure}
+
+		Diese nennen wir Ferroelektrika. Um den Zusammenhang zwischen der Polarisation $P$ und dem elektrischen Feld $E$ besser
+		beschreiben zu k\"onnen, werden wir zun\"achst eine schematische Darstellung eines Ferroelektrikums einf\"uhren.
+		(Abb. \ref{img_ferroelek})
+	\begin{figure}[htb]
+		\includegraphics[height=260pt, width=260pt]{schemaferroel} 
+		\caption{Schema eines Ferroelektrikums}
+		\label{img_ferroelek}
+	\end{figure}
+	
+		Die Zeichnung ist nat\"urlich nur eine starke Vereinfachung eines zweidimensionalen Kristalls, trotzdem kann man hierran
+		sehr gut die Polarisation des Kristalls sehen. In den ersten drei Spalten sind die positiven Ionen gegen\"uber den negativen
+		Ionen nach unten verschoben. Dieser Bereich wird Dom\"ane genannt und bezeichnet einen Bereich, in denen die
+		Ionen die gleiche Ausrichtung haben. Dementsprenden sind die zwei rechten Spalten	ebenfalls eine Dom\"ane. Jede
+		Dom\"ane ist polarisiert und hat eine Polarisationsrichtung.
+		
+		Dass solche Konfigurationen auftreten -- und sich die nebeneinanderliegende Dipole nicht, wie man naiv vermuten
+		k\"onnte, antiparallel ausrichten -- ist dem Auftreten von Wei{\ss}-Bezirken im Ferromagneten sehr \"ahnlich:
+		 
+		Aufgrund des Pauli-Prinzips "`verdr\"angt"' ein Elektron innerhalb eines Bereichs ein zweites mit gleichem Spin; es
+		entsteht das sogenannte \emph{Austauschloch}. Deshalb k\"onnen unterschiedlich polarisierte Elektronen einen
+		geringeren r\"aumlichen Abstand haben, der gleichpolarisierte Zustand ist energetisch tats\"achlich g\"unstiger und es
+		entsteht eine Potentialbarriere zwischen den verschieden polarisierten Zust\"anden.
+		Ein beispielhaftes, zugeh\"origes Potential ist in Abb. \ref{img_potential} dargestellt. 
+		
+		Es sind jedoch nicht alle Dipole gleich polarisiert -- dies entspr\"ache einer sehr starken und st\"andigen Polarisation.
+		Vielmehr bilden sich, \"ahnlich den magnetischen in Ferromagneten, gleichpolarisierte Bezirke. Deren W\"ande sind
+		gegen\"uber den Ferromagnetischen sehr d\"unn und leichter verschiebbar, dadurch bilden sich wesentlich mehr
+		Bezirke auf gleicher Fl\"ache und diese sind schwerer zu beobachten. 
+		
+	\begin{figure}[htb]
+		\includegraphics[height=300pt, width=360pt]{Potential}
+		\caption{(c) Potential eines Paraelektrikums, (d) Die durch die Austauschwechselwirkung entstehende Potentialbarriere zwischen Zust\"anden verschiedener Polarisation benachbarter Dipole}
+		\label{img_potential}
+	\end{figure}
+	
+		Nun kann man auf Abb. \ref{img_hysterese}, welche die schematische Hysteresekurve zeigt, den Pfad erk\"aren.
+		Der Pfadanfang ist im Nullpunkt des Graphen und steigt linear,	da die Energie zu diesem Zeitpunkt nicht gro{\ss}
+		genug ist um die Potentialbarriere zu \"uberwinden. Am Punkt A ist das $E$-Feld dann stark genug,	dass die
+		Potentialbarriere \"uberwunden werden kann, was zu einem starken Anstieg der Polarisation bis zum Punkt B f\"uhrt.
+		Im Abschnitt BC tritt	die S\"attigung des Ferroelektrikums ein. Zu diesem Zeitpunkt besteht der Kristall nur aus einer
+		einzigen Dom\"ane. Wenn nun das elektrische Feld wieder reduziert wird, geht die Kurve nicht durch den Nullpunkt,
+		sondern folgt dem Pfad von C nach D. Dies ist damit zu erkl\"aren, dass nicht alle Ionen wieder in ihre Ausgangsposition
+		gehen, sondern ein Teil in ihrer derzeitigen Position verharren. Diesen Zustand nennen wir wie im magnetischen Fall
+		Remanenz. Die Feldst\"arke die ben\"otigt wird um die Polarisation zu neutralisieren wird Koerzitivfeldst\"arke $E_c$ genannt.
+	  
+	 	\subsection{Ferroelektrischer Phasen\"ubergang 1.~Ordnung und\\2.~Ordnung}
+		Der Phasenübergang eines Ferroelektrikums ist der Übergang zwischen zwei Zuständen, wie zum Beispiel dem
+		ferroelektrischen zum paraelektrischen. Ein Phasenübergang 1.~Ordnung ist dadurch definiert, dass er Sprunghaft ist,
+		während ein Phasenübergang 2.~Ordnung kontenuierlich ist. Der Phasenübergang von ferroelektrisch zu elektrischen,
+		ist immer ein Übergang 1.~Ordnung. Dass heißt die Remanz des Ferroelektrikums fällt beim Übergang plötzlich weg.
+		
+		\subsection{Curie-Weiss-Gesetz, Curie-Temperatur,\\Curie-Konstante}
+	  	Wie wir eben schon beschrieben haben, kann die Polarisationsrichtung, also die Orientierung der Ionen in unserem
+	  	vereinfachten Gitter durch das Anlegen eines elektrischen Feldes verändert werden. Erhöht man nun die Temperatur,
+	  	so erhöht sich auch die Schwingungsenergie der Ionen im Gitter.
+	  	\\
+	  	Erhöht man die Temperatur über eine kritische Temperatur hinaus, wird die kinetische Energie größer als der sich durch
+	  	die Austauschwechselwirkung ergebende "`Vorteil"'  paralleler Polarisierung. Dadurch gibt es keine Potentialbarriere
+	  	mehr, wie in \ref{img_potential} (c) dargestellt; es gibt nur noch einen energetisch stabilen Zustand. Der Kristall zeigt keine
+	  	Remanenz mehr und man beobachtet nicht länger das für Ferroelektrika charakteristische Hystereseverhalten: der Kristall
+	  	wird \emph{paraelektrisch}, man spricht von einem \emph{Paraelektrikum}. Die Temperatur, bei der das Ferroelektrikum
+	  	seine ferroelektrischen Eigenschaften verliert, heißt analog zum ferromagnetischen Fall die \emph{Curie-Temperatur $T_C$}.
+	  	
+	  	Die Abhängigkeit der Dielektrizitätskonstante $\epsilon$ ist durch das \emph{Curie-Weiss-Gesetz}
+	  	\begin{equation*}
+	  		\epsilon = \epsilon_0 \frac{C}{T-T_0}
+	  	\end{equation*}
+	  	gegeben, wobei $C$ die Curie-Konstante und $T_0$ die Curie-Weiss-Temperatur ist. Man sieht, dass $\epsilon$ für $T=T_0$
+	  	sehr groß wird, d.h. % TODO: hmm, ja? Polarisierbarkeit schlecht oder sehr gut? bin zu müde\ldots
+	  	 \\ Im allgemeinen sind $T_0$ und $T_C$ verschieden; Kristalle, bei denen die Curie-Temperatur auch die
+	  	 Curie-Weiss-Temperatur ist, weisen einen Phasenübergang 1.~Ordnung auf, andere einen 2.~Ordnung.
+			
+	  \subsection{Temperaturverlauf von $P_s(T)$ und $\epsilon(T)$}
+			\begin{figure}[H]
+				\center\includegraphics[width=265pt, height=140pt]{BaTiO3}
+			\end{figure}
+			\begin{figure}[H]
+				\center\includegraphics[width=265pt, height=150pt]{DK}
+			\end{figure}				
+		\subsection{Landautheorie f\"ur Phasen\"uberg\"ange} 
+	 Die Landau'sche freie Energiedichte $\widehat{F}$ ist gegeben durch
+	 \begin{equation}\label{eqn_landaufunktion}
+	 \widehat{F}(P,T,E)= -EP+g_0 +\frac{1}{2}g_2 P^2+\frac{1}{4}g_4 P^4 + \frac{1}{6} g_6 P^6 + \ldots,
+	 \end{equation}
+	 wobei die $g_n$ von der Temeratur abhängig sind.
+	 Die Funktion liefert eine konsistente thermodynamische Beschreibung für das Polarisationsverhalten eines
+	 ferroelektrischen Kristalls. Die Herleitung und das genaue Verhalten im einzelnen interessiert uns nicht, aber wir
+	 wollen ein paar Fälle unterscheiden. Der Wert von $P$ im thermischen Gleichgeweicht ist durch das Minimum von
+	 $\widehat{F}$ als Funktion von P gegeben.
+	 Differenzieren in Richtung von $P$ liefert uns mit diesem Ansatz also die Formel:
+	 \begin{equation*}
+		\frac{\partial \widehat{F}(P,T,E)}{\partial P}=-E+g_2 P +g_4 P^3+g_6 P^5+ \ldots.
+	 \end{equation*}
+	 Um einen ferroelektrischen Zustand zu erhalten, müssen wir annehmen, dass der Koeffizient $g_2$  in
+	 \eqref{eqn_landaufunktion} für eine bestimmte %TODO: hier fehlt was\ldots
+	 
+	 Wir wissen bereits, dass $E=\frac{1}{(\epsilon_0(\epsilon-1)} P$  und dass damit aus \eqref{eqn_landaufunktion}
+	 \begin{equation*}
+	 	\frac{\partial \widehat{F}(P,T,E)}{\partial P}=(-\frac{1}{(\epsilon_0(\epsilon-1)} +g_2) P +g_4 P^3+g_6 P^5+ \ldots
+	 \end{equation*}
+	 wird. Außerdem wissen wir, dass $\epsilon = \epsilon_0 \frac{C}{T-T_0}$, also
+	 \begin{equation*}
+	 	T\xrightarrow{\epsilon \rightarrow \infty} T_0
+	 \end{equation*}
+	 Für große $\epsilon$ und für kleine $P$, kann man die Formel vereinfachen zu
+	 \begin{equation*}
+	 \frac{\partial \widehat{F}(P,T,E)}{\partial P}=(-\frac{T-T_0}{\epsilon_0^2 C} +g_2) P
+	 \end{equation*}
+	 Da wir annehmen, dass es sich bei unserem Kristall um ein Ferroelektrikum handelt, ist der Phasenübergang in $P=0$ stetig.
+	 Deswegen erhält man, dass $g_2=\frac{T-T_0}{C \epsilon_0^2}$ %TODO: wie?
+	 ist, da sonst eine Sprungstelle auftreten würde, die unserer Annahme eines Phasenübergangs 2.~Ordnung widerspräche.
+	 %\frac{\partial \widehat{F}(P,T,E)}{\partial P}=0$ verletzt wird.
+	 %oder sollte das hier noch rein?
+	 	\section{Festk\"orpereigenschaften von TGS}
+		
+		\subsection{Polare Achse und Klassifisierung von Ferroelektrika}
+		Im folgenden betrachten wir wieder den Querschnitt eines Kirstallgitters, wie in Abbildung \ref{img_ferroelek}, den wir als Ebene ansehen wollen, 
+		dessen Normalenvektor in der Mitte der Ebene stehen soll. Nimmt man sich nun eine Grade die in dieser Ebene liegt, die durch den Normalenvektor
+		geht,	so stellt man fest, dass eine Drehung um 180° um diese Grade das Gitter nicht invariant auf sich selbst abbildet. Legt man nun eine Achse 
+		durch den Normalenvektor, erhält man das, was wir als polare Achse bezeichnen.
+		
+		Man kann Ferroekeltrika in drei Klassen aufteilen:
+		\begin{enumerate}
+          \item Ferroelektrika, die im nichtpolaren Zustand oberhalb der Curie-Temperatur piezoelektrisch sind: Die Kristallklasse ist orthorhombisch oder
+		 tetragonal. Es gibt nur eine polare Achse und damit nur zwei Polarisationsrichtungen.
+          \item Ferroelektrika, die im nichtpolaren Zustand nicht piezoelektrisch sind: Die Kristalle weisen eine kubische Symmetrie auf,
+						und es gibt mehrere gleichwertige Polarisationsrichtungen
+		 \item  Ferroelektrika, die bisher keiner der beiden erstgenannten Gruppen zugeordnet werden können
+        \end{enumerate}
+
+		Eine Einteilung der Ferroelektrika in diese drei Kategorien ist in der Tabelle \ref{tab_Klassi} aufgelistet.
+		\begin{table}[hb]
+			\begin{tabular}{|c|p{2cm}|c|p{2cm}|}
+			\hline
+			Kristall & Curie-Temperatur TC in K  & $\frac{C}{ m^2}$ & bei der Temperatur in K\\
+			\hline
+			KDP-Gruppe (einachsig polar)\\
+			\hline 
+			$KH_2PO_4$ & 123& 0,53& 96\\
+		\hline
+		KD2PO4& 213& 0,45& \quad\\
+		\hline
+		RbH2PO4& 147& 0,56& 90\\
+\hline
+		RBH2AsO4& 111&\quad&\quad\\
+\hline
+		KH2AsO4& 96& 0,50& 80\\
+\hline
+		KD2AsO4& 162&\quad & \quad\\
+\hline
+		CsH2AsO4& 143& \quad & \quad\\
+\hline
+		CsD2AsO4& 212& \quad & \quad\\
+\hline
+		Perowskit-Gruppe (mehrachsig polar)\\
+\hline
+		BaTiO3& 393 &2,60& 296\\
+\hline
+		SrTiO3 &32 &0,30& 4\\
+\hline
+		WO3& 223& \quad & \quad\\
+\hline
+		KNbO3 &712& 3,00 &523\\
+\hline
+		PbTiO3& 763& 0,50& 300\\
+\hline
+		TGS-Gruppe (Sonstige)\\
+\hline
+		Triglyzininsulfat& 322& 0,28& 293\\
+\hline
+		Triglyzininselenat& 295& 0,32& 273\\
+\hline
+		LiTaO3 & \quad & \quad & \quad\\
+\hline
+		LiNbO3 &147 & \quad & \quad\\
+\hline
+		andere Sulfate& \quad & \quad & \quad\\
+\hline
+		andere Selenate& \quad & \quad  & \quad\\
+	\hline
+		Alaune(schwefelsaure Doppelverbindung)& \quad & \quad  & \quad\\
+	\hline
+		\end{tabular}
+		\caption{Klassifikation der Ferroelektrikum}
+		\label{tab_Klassi}
+		\end{table}
+		\subsection{Monoklines Kristallsystem}
+		Das Monokline Kristallsystem zeichnet sich durch drei unterschiedlich lange Achsen zwei 90° Winkeln und einem Winkel größer als 90° aus.
+		\begin{figure}[hbt]
+		\subfigure[Monoklines-Primitives Gitter]{\includegraphics[width=165pt, height=200pt]{Mono1}}\hfill
+		\subfigure[Monoklines-Basiszentriertes Gitter]{\includegraphics[width=165pt, height=200pt]{Mono2}}
+		\end{figure}
+		\subsection{Richtungsabh\"angigkeit der DK}
+				
+		\subsection{Piezoelektrizit\"at}
+		Kristalle, an denen durch mechanische Verformung eine Spannung messbar wird und die sich unter einer angelegten 
+		Spannung verformen, nennt man piezoelektrisch. Ferroelektrika sind unterhalb der Curie-Temperatur generell piezoelektrisch, jedoch nicht alle
+		Piezoelektrika sind ferroelektrisch. Für den Piezoeffekt ist eine polare Achse notwendig, %TODO: Warum?
+		die auch im  unpolaren Zustand, also oberhalb der
+		Curietemperatur, vorhanden sein kann. %TODO: hm?!? ``kann''?
+		   
+		\subsection{Mechanismus der Dipolumkehr}
+		Wie in Abbildung \ref{img_potential} skizziert, durchläuft der Kristall beim Abkühlen von (a) zu (b) eine Strukturumwandlung von kubisch zu
+		tetragonal, was eine Potentialveränderung von (c) zu (d) zur Folge hat. Eine Dipolumkehr ist in unserem Beispiel eine Drehung um 180° um eine 
+		Achse, die nicht längs zu der längsten Achse liegt. 
+		
+	\section{Messmethoden}
+		
+		\subsection{Schaltung von Sawyer und Tower}
+		Die Schaltung von Sawyer und Tower dient der Darstellung der Hysteresekurve einer ferroelektrischen Substanz. Dazu wird das Signal zunächst von 
+		einem Amplifier 100-fach verstärkt und dann auf die Probe gegeben. 
+		\begin{figure}[htb]
+		\center\includegraphics[width=360pt, height=270pt]{SchaltungST}
+		\caption{Schaltung von Sawyer und Tower}
+		\label{img_SchaltungST}
+		\end{figure}
+		\subsection{Wechselstrommessbr\"ucke}
+		Ähnlich wie beim Gleichstrom, lässt sich auch bei Wechselstrom eine Brückenschaltung realisieren, die dann auch treffend 
+		Wechselstrombrückenschaltung genannt wird. Mit der in \ref{img_wechselstrombruecke} gezeigten Anordnung lassen
+		sich dann induktive und kapazitive Widerstände in Abhängigkeit der Kreisfrequenz $\omega$ bestimmen.
+		Die vier Widerstände $Z_1$ bis $Z_4$ sind alle komplex, genauso wie der Widerstand des Nullindikatos, den wir mit
+		$Z_5$ bezeichnen.
+		Die Nullindikatorspannung $U_2$ wird genau dann Null, wenn 
+		\begin{equation*}
+		Z_1 Z_4 = Z_2 Z_3\quad\text{mit}\quad Z_k= |Z_k| e^{i \phi_k}
+		\end{equation*}
+		ist. Damit erhält man, dass
+		\begin{eqnarray*}
+		|Z_1| |Z_4| & = & |Z_2| |Z_3| e^{i (\phi_2 + \phi_3 -\phi_1 - \phi_4) }\quad\text{mit}\quad \phi_2 + \phi_3 -\phi_1 - \phi_4 \in \left\{0,2 \pi \right\}\\
+		& = & \left|Z_2\right| \left|Z_3\right|.
+		\end{eqnarray*}
+		\begin{figure}[htb]
+			\center\includegraphics[height=236pt, width=380pt]{Wechselstrombruecke}
+			\caption{Wechselstrombrücke}
+			\label{img_wechselstrombruecke}
+		\end{figure}
+		Im Gegensatz zum Gleichstromfall, muss die Brückenschaltung nicht unbedingt abgleichbar sein. Ob eine Abgleichung
+		möglich ist, lässt sich am einfachsten an der Phasenbedingung ablesen. Man muss dabei bedenken, dass nicht nur der Betrag,
+		sondern auch die Phase übereinstimmen muss. %TODO: wobei?
+		Dass heißt, falls der Betrag zwar gleich ist, die Phase aber unterschiedlich, so wird $U_2$ in \ref{img_wechselstrombruecke}
+		niemals Null werden.
+		Dementsprechend reicht auch gleiche Phase allein nicht aus, falls der Betrag unterschiedlich ist. Deshalb braucht man bei der 
+		Wechselstrombrückenschaltung zwei einstellbare Elemente, falls man in jedem Fall eine Abgleichung erreichen möchte.
+		\begin{figure}[htb]
+		\subfigure[abgleichbarer Fall]{\includegraphics[width=190pt, height=185pt]{abgleichbareWSB}}\hfill
+		\subfigure[nicht abgleichbarer Fall]{\includegraphics[width=190pt, height=185pt]{nichtabgleichbareWSB}}
+		\caption{Im obenstehenden Fall sieht man, dass auf der im rechten Bild gezeigten Schaltung niemals ein Abgleich möglich sein wird, da die Spannung 
+		die in $L_3$ abfällt Null ist, wenn die Spannung die in $C_1$ abfällt maximal ist. Auf dem linken Bild funktioniert diesauf Grund der um $\pi$ 
+		verschobenen Phase}
+		\label{img_wechselstrombruecke}
+		\end{figure}
+\end{document}
