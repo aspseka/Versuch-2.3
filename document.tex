@@ -119,19 +119,28 @@
 	  \subsection{Temperaturverlauf von $P_s(T)$ und $\epsilon(T)$}
 			\begin{figure}[H]
 				\center\includegraphics[width=265pt, height=140pt]{BaTiO3}
+				\caption{Temperaturverlauf von Bariumtitanat, mit einer Curie-Temperatur von 120°C}
 			\end{figure}
 			\begin{figure}[H]
 				\center\includegraphics[width=265pt, height=150pt]{DK}
+				\caption{Temperaturabhänigkeit der Dielektrizitätskonstante}
 			\end{figure}				
 		\subsection{Landautheorie f\"ur Phasen\"uberg\"ange} 
 	 Die Landau'sche freie Energiedichte $\widehat{F}$ ist gegeben durch
 	 \begin{equation}\label{eqn_landaufunktion}
 	 \widehat{F}(P,T,E)= -EP+g_0 +\frac{1}{2}g_2 P^2+\frac{1}{4}g_4 P^4 + \frac{1}{6} g_6 P^6 + \ldots,
 	 \end{equation}
-	 wobei die $g_n$ von der Temeratur abhängig sind.
 	 Die Funktion liefert eine konsistente thermodynamische Beschreibung für das Polarisationsverhalten eines
-	 ferroelektrischen Kristalls. Die Herleitung und das genaue Verhalten im einzelnen interessiert uns nicht, aber wir
-	 wollen ein paar Fälle unterscheiden. Der Wert von $P$ im thermischen Gleichgeweicht ist durch das Minimum von
+	 ferroelektrischen Kristalls.
+	 Betrachtet man für $E=0$ den Kurvenverlauf in \ref{img_Landau} für verschiedene Vorfaktoren, so kann man qualitative Aussagen über diese machen.
+	 \begin{figure}[H]
+	 \center\includegraphics[width=304pt, height=200pt]{Landau}
+	 \caption{rot:$g_2 > 0, g_4 > 0 $ ; \quad schwarz:$g_2 < 0, g_4 > 0$ ; \quad blau:$g_2 > 0, g_4 < 0$}
+	 \label{img_Landau}
+	 \end{figure}
+	 Da unser Potential niemals so aussehen darf wie der blaue Graph, kann $g_6$ in diesem Fall nicht vernachlässigt werden und muss als positiv 
+	 angenommen werden. In diesem Fall haben wir einen Phasenübergang 2.~Ordnung. 
+	 Der Wert von $P$ im thermischen Gleichgeweicht ist durch das Minimum von
 	 $\widehat{F}$ als Funktion von P gegeben.
 	 Differenzieren in Richtung von $P$ liefert uns mit diesem Ansatz also die Formel:
 	 \begin{equation*}
