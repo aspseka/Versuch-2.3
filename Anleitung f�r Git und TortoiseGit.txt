@@ -86,8 +86,14 @@ Nun ist die aktuelle Version der Datei im System (und könnte jederzeit wiederher
 	6. (alternativ könnten die Änderungen auch als Patch per Mail geschickt werden (Email patch) oder
 	   eMail empfangene eingetragen werden (Apply patch) )
 	
+NACHTRAG: Schneller geht das, wenn man nach dem Commit in dem Fenster "Erfolgreich" statt auf Finish direkt auf Push klickt!
+
 
 Nach dem Übertragen sind die Änderungen nun online und können von jedem direkt abgerufen werden. (siehe auch den Abschnitt über "Abrufen")
+
+
+Wenn etwas nicht klappt:
+Bitte den zweiten Schritt von "Versuch herunterladen" durchführen / diese Einstellung kontrollieren. Es dürfen keine Leerzeichen vor oder nach der URL stehen...
 
 
 
