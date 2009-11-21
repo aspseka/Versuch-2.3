@@ -1,0 +1,124 @@
+Inhalt
+
+1. Vorbereitung und Allgemeines
+2. Datei hinzufügen
+3. Ändern einer Datei
+4. Übertragen (Commit)
+5. Abrufen
+6. Eigene Änderungen verwerfen
+7. Konflikte
+8. Versuch herunterladen
+
+
+
+
+1. Vorbereitung und Allgemeines (Wichtig)
+
+Falls noch nicht geschehen, den lokalen Ordner auf "remote" umstellen:
+	1. Rechtsklick auf den Ordner, in dem alle Dateien drin sind
+	2. TortoiseGit/"Switch/Checkout..."
+	3. als "branch" "remotes/origin/master" wählen
+	4. Finish
+und danach den eigenen Namen setzen, um das System nicht durcheinanderzubringen:
+	1. Rechtsklick auf den Ordner, in dem alle Dateien sind
+	2. "ToroiseGit/Settings"
+	3. "Git\Config"
+	4. Nickname und eine eMail-Adresse angeben (egal ob gültig)
+	5. AutoCrlf an, SafeCrlF aus, Save as Global an
+	6. Apply und Close
+
+Alle nun folgenden Operationen (hoch- und runterladen) werden immer mit dem Ordner durchgeführt, nicht mit einzelnen Dateien (sofern nicht anders angegeben), denn die meisten Operationen im Kontextmenü beziehen sich nur auf die jeweils angeklickte Datei!
+
+Weiterhin gilt, daß alle Änderungen (geänderte Dateien, hinzugefügte Dateien, ...) immer erst dann hochgeladen werden, wenn die lokale Version abgeglichen wird (siehe "Commit")
+
+
+
+2. Datei hinzufügen
+
+Rechtsklick auf den Ordner, "TortoiseGit/Add..." und dann genau die (schon im Ordner bestehenden, aber noch nicht mit der Online-Kopie verknüpften) Dateien auswählen, die der Online-Kopie hinzugefügt werden sollen.
+Bitte keine
+	* temporären Dateien von Latex (.aux, .log, .toc, ...)
+	* Eclipse-Projekte (.project, .texlipse)
+	* Ausgabe-Dateien (DVI, PDF, ...) - außer Vorlagen
+hinzufügen.
+
+Danach das Übertragen (Commit) nicht vergessen.
+
+
+
+3. Ändern einer Datei
+
+Dateien können immer und sofort geändert werden, es sind ganz normale Dateien, die lediglich mit einer Online-Version "verbunden" sind.
+Es empfiehlt sich natürlich, vorher den aktuellen Stand der Dateien abzurufen (siehe entsprechenden Abschnitt), aber das ist kein Muß.
+
+>>>
+Ändern zwei oder mehr gleichzeitig die selbe Datei, werden die Änderungen beim Übertragen automatisch zusammengefügt!
+<<<
+
+(siehe auch "Konflikte beheben")
+
+Danach das Übertragen (Commit) nicht vergessen.
+
+
+
+4. Übertragen (Commit)
+
+Alle Änderungen passieren zunächst einmal nur auf dem eigenen PC. Hat man genug Änderungen beisammen, können diese in einem Paket übertragen werden.
+Idealerweise geschieht das nach Themen (oder semantischem Zusammenhang) getrennt; also z.B. nach Vorbereitungs-Kapitel. Das macht sowohl die Zuordnung, aber auch v.a. die Konflikt-Behebung (siehe eigenen Abschnitt) viel einfacher.
+
+Zum Übertragen den Ordner rechts anklicken, in dem alle Dateien sich befinden und "Git Commit -> "master"..." wählen.
+WICHTIG: Wenn der Befehl anders lautet (insbesondere, wenn "master" fehlt) ist etwas schief gelaufen... dann sollte man die Dateien nochmal neu runterladen.
+Danach als "Message" KURZ beschreiben, was geändert/hinzugefügt/gelöscht/überarbeitet wurde.
+Im unteren Teil könnten auch direkt noch Dateien hinzugefügt werden; besser macht man das aber wie in Punkt \ref{Datei hinzufügen}.
+
+Nach dem Übertragen sind die Änderungen online und können von jedem direkt abgerufen werden. (siehe auch den Abschnitt über "Abrufen")
+
+Aus einer Anleitung zu Git:
+"A note on commit messages: Though not required, it's a good idea to begin the commit message with a single short (less than 50 character) line summarizing the change, followed by a blank line and then a more thorough description. Tools that turn commits into email, for example, use the first line on the Subject: line and the rest of the commit in the body."
+
+
+
+5. Abrufen
+
+Vorher sollten alle eigenen Änderungen übertragen oder verworfen werden. Dies ist zwar auch kein Muß, macht den Prozess aber einfacher.
+
+Zum Abrufen von Änderungen anderer klickt man mit der rechten Maustaste auf den Ordner, in dem alle Dateien sind und wählt "Git Sync...".
+In diesem Fenster sind v.a. die ersten drei Felder wichtig:
+	1. Local branch: muß "master" sein
+	2. Remote branch: muß "master" sein
+	3. Remote URL: muß "origin" sein
+Steht der Punkt "master" für local branch nicht zur Verfügung, muß nochmal ein Umstellen vorgenommen werden. Siehe Punkt \ref{Vorbereitungen}.
+Danach "Pull" wählen. (Ist pull nicht sichtbar: Im linken unteren Knopf, ggf. auf den Pfeil klicken)
+Alle Änderungen werden übertragen, die Dateien sind danach auf dem neuesten Stand.
+
+
+
+6. Eigene Änderungen verwerfen
+
+Ein Rechtsklick auf den Ordner und "TorotiseGit/Revert..." läßt einen Dateien auswählen, die auf die letzte Version zurückgesetzt werden sollen.
+ACHTUNG: Alle eigenen (lokalen) Änderungen gehen verloren.
+
+
+
+7. Konflikte
+
+Was sind Konflikte?
+Haben mehrere Autoren ein- und dieselbe Zeile bearbeitet, womöglich noch an der selben Stelle, tritt ein Konflikt auf, denn Git kann nun nicht mehr entscheiden, wessen Änderung präferiert werden soll.
+Ein manuelles Eingreifen ist notwendig.
+
+Was passiert?
+Beim Übertragen der Änderungen oder beim Abrufen wird ein Konflikt offenbar und Git präsentiert einen mit einem Datei-Vergleich der zwei Datei-Versionen.
+In diesem Programm fügt man an den Konfliktstellen die Inhalte der zwei Versionen selber zusammen und entscheidet an jeder Konfliktstelle, welche Änderung durchgeführt werden soll.
+
+
+
+8. Versuch herunterladen
+
+Um einen neuen Versuch herunterzuladen, s.d. die Dateien dann mit der Online-Kopie verknüpft sind, geht man so vor:
+	1. Bei github.com einloggen und den Versuch aufrufen (das zugehörige "repository")
+	2. Die URL "your clone URL" kopieren. (WICHTIG: nicht Rechtslkick->Kopieren, sondern den Text selber markieren oder auf das kleine Zwischenablage-Symbol hinter dem Link klicken - der Text muß mit git@ beginnen.)
+	3. Einen Ordner aussuchen, in dem das Verzeichnis für den Versuch erstellt werden soll (also z.B. der eclipse workspace)
+	4. Rechtsklick auf diesen Ordner und "Git Clone..."
+	5. Als URL die eben kopierte eintragen, das Häkchen bei "Load Putty key" weg
+	6. Ok
+Nun wird der Versuch übertragen. Die Schritte aus der Vorbereitung sollten nicht notwendig sein, aber man sollte kontrollieren, daß unter Settings\Git\Config ein Name/eMail eingetragen ist.
