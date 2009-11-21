@@ -25,7 +25,8 @@ und danach den eigenen Namen setzen, um das System nicht durcheinanderzubringen:
 	3. "Git\Config"
 	4. Nickname und eine eMail-Adresse angeben (egal ob gültig)
 	5. AutoCrlf an, SafeCrlF aus, Save as Global an
-	6. Apply und Close
+	6. Apply und Ok
+Zur Sicherheit sollte man auch nochmal die URL kontrollieren - siehe Abschnitt \ref{Versuch herunterladen}.
 
 Alle nun folgenden Operationen (hoch- und runterladen) werden immer mit dem Ordner durchgeführt, nicht mit einzelnen Dateien (sofern nicht anders angegeben), denn die meisten Operationen im Kontextmenü beziehen sich nur auf die jeweils angeklickte Datei!
 
@@ -130,4 +131,16 @@ Um einen neuen Versuch herunterzuladen, s.d. die Dateien dann mit der Online-Kop
 	4. Rechtsklick auf diesen Ordner und "Git Clone..."
 	5. Als URL die eben kopierte eintragen, das Häkchen bei "Load Putty key" weg
 	6. Ok
-Nun wird der Versuch übertragen. Die Schritte aus der Vorbereitung sollten nicht notwendig sein, aber man sollte kontrollieren, daß unter Settings\Git\Config ein Name/eMail eingetragen ist.
+
+Nun wird der Versuch übertragen.
+
+Leider ist bei der derzeitigen Version von ToroiseGit noch ein weiterer Schritt nötig:
+	1. neu erstellten Ordner mit rechter Maustaste anklicken
+	2. "ToroiseGit\Settings"
+	3. "Git\Remote"
+	4. "origin" anklicken
+	5. bei "URL" nochmal die eben kopierte URL eingeben
+	   (denn standardmäßig wird dort nur die "öffentliche" Adresse eingetragen; man hat keine Schreib-Rechte)
+	6. Apply und Ok
+
+Die Schritte aus der Vorbereitung sollten nicht notwendig sein, aber man sollte kontrollieren, daß unter Settings\Git\Config ein Name/eMail eingetragen ist.
