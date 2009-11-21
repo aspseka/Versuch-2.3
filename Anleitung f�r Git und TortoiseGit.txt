@@ -138,7 +138,7 @@ Leider ist bei der derzeitigen Version von ToroiseGit noch ein weiterer Schritt 
 	1. neu erstellten Ordner mit rechter Maustaste anklicken
 	2. "ToroiseGit\Settings"
 	3. "Git\Remote"
-	4. "origin" anklicken
+	4. "origin" anklicken (Doppelklick!)
 	5. bei "URL" nochmal die eben kopierte URL eingeben
 	   (denn standardmäßig wird dort nur die "öffentliche" Adresse eingetragen; man hat keine Schreib-Rechte)
 	6. Apply und Ok
