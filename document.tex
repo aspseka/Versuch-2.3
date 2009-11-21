@@ -139,33 +139,37 @@
 	 \label{img_Landau}
 	 \end{figure}
 	 Da unser Potential niemals so aussehen darf wie der blaue Graph, kann $g_6$ in diesem Fall nicht vernachlässigt werden und muss als positiv 
-	 angenommen werden. In diesem Fall haben wir einen Phasenübergang 2.~Ordnung. 
-	 Der Wert von $P$ im thermischen Gleichgeweicht ist durch das Minimum von
-	 $\widehat{F}$ als Funktion von P gegeben.
-	 Differenzieren in Richtung von $P$ liefert uns mit diesem Ansatz also die Formel:
+	 angenommen werden. In diesem Fall haben wir einen Phasenübergang 1.~Ordnung. 
+	 Nun wollen wir die stabilen Gleichgewichte des Potenzials für $g_4>0$ finden, was wir durch differenzieren in Richtung von $P$ geliefert bekommen.
 	 \begin{equation*}
-		\frac{\partial \widehat{F}(P,T,E)}{\partial P}=-E+g_2 P +g_4 P^3+g_6 P^5+ \ldots.
+		\frac{\partial \widehat{F}(P,T,E)}{\partial P}=-E+g_2 P +g_4 P^3+ \ldots.
 	 \end{equation*}
-	 Um einen ferroelektrischen Zustand zu erhalten, müssen wir annehmen, dass der Koeffizient $g_2$  in
-	 \eqref{eqn_landaufunktion} für eine bestimmte %TODO: hier fehlt was\ldots
-	 
-	 Wir wissen bereits, dass $E=\frac{1}{(\epsilon_0(\epsilon-1)} P$  und dass damit aus \eqref{eqn_landaufunktion}
+	 Wir setzten wiederum $E=0$ und erhalten somit  
+	 	 \begin{equation*}
+		\frac{\partial \widehat{F}(P,T,E)}{\partial P}=g_2 P +g_4 P^3= 0 \Leftrightarrow P g_4(\frac{g_2}{g_4}+P^2)=0
+	 \end{equation*}
 	 \begin{equation*}
-	 	\frac{\partial \widehat{F}(P,T,E)}{\partial P}=(-\frac{1}{(\epsilon_0(\epsilon-1)} +g_2) P +g_4 P^3+g_6 P^5+ \ldots
+			\Leftrightarrow P=0 \text{oder} P^2=-\frac{g_2}{g_4}
 	 \end{equation*}
-	 wird. Außerdem wissen wir, dass $\epsilon = \epsilon_0 \frac{C}{T-T_0}$, also
+	 \begin{figure}
+	 \center\includegraphics[height=165pt, width=275pt]{Wurzel}
+	 \caption{Abhängigkeit der Polarisation von der Temperatur}
+	 \end{figure}
+	 Aus experimenten wissen wir, dass $P \propto \gamma \sqrt{(T_0 - T)}$
+	 Dieser Ansatz liefert uns für $\widehat{F}$:
 	 \begin{equation*}
-	 	T\xrightarrow{\epsilon \rightarrow \infty} T_0
+		P^2=-\frac{\gamma (T_0 - T)}{g_4} \Rightarrow \frac{\partial \widehat{F}(P,T,E)}{\partial P}=\gamma (T_0 - T) P + g_4 P^3 
 	 \end{equation*}
-	 Für große $\epsilon$ und für kleine $P$, kann man die Formel vereinfachen zu
+	 Setzen wir dies in \eqref{eqn_Landaufunktion} ein, so erhalten wir für die freie Energie $\widehat{F}$ im Gleichgewicht:
 	 \begin{equation*}
-	 \frac{\partial \widehat{F}(P,T,E)}{\partial P}=(-\frac{T-T_0}{\epsilon_0^2 C} +g_2) P
+	 	 \widehat{F}(P,T,E)= -EP+g_0 +\frac{1}{2} \gamma (T_0 - T) P^2+\frac{1}{4}g_4 P^4
 	 \end{equation*}
-	 Da wir annehmen, dass es sich bei unserem Kristall um ein Ferroelektrikum handelt, ist der Phasenübergang in $P=0$ stetig.
-	 Deswegen erhält man, dass $g_2=\frac{T-T_0}{C \epsilon_0^2}$ %TODO: wie?
-	 ist, da sonst eine Sprungstelle auftreten würde, die unserer Annahme eines Phasenübergangs 2.~Ordnung widerspräche.
-	 %\frac{\partial \widehat{F}(P,T,E)}{\partial P}=0$ verletzt wird.
-	 %oder sollte das hier noch rein?
+	  Für Temperaturen oberhalb $T_0$ sind die Glieder $P^4$ und $P^6$ vernachlässigbar, da $P$ klein und somit erhalten wir, da wir annehmen, dass
+	  die innere Energie Null wird:
+	 \begin{equation*}
+	 	 E= \gamma (T_0 - T)P
+	 \end{equation*}
+	 \newpage
 	 	\section{Festk\"orpereigenschaften von TGS}
 		
 		\subsection{Polare Achse und Klassifisierung von Ferroelektrika}
@@ -308,4 +312,6 @@
 		verschobenen Phase}
 		\label{img_wechselstrombruecke}
 		\end{figure}
+		\chapter{Auswertung}
+		\Huge{Ich brauche die Daten}
 \end{document}
