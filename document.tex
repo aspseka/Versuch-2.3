@@ -32,8 +32,10 @@
 		\end{equation*}
 		Dabei ist $(\epsilon - 1) = \chi$ die Suszeptibilit\"at und $\epsilon_0$ die Dielektrizit\"atskonstante ($DK$). $DK$ ist definiert
 		als der Quotient der Kapazit\"aten eines Plattenkondensators mit und ohne Dielektrikum (ohne Vakuum).
-		Polarisation ist das Dipolmoment pro Volumeneinheit.
-	
+		Polarisation ist das Dipolmoment pro Volumeneinheit. Dementsprechend kann die Polarisation berechnet werden mit:
+		\begin{equation*}
+		P = \sum{p_i}=\sum{\frac{Q_i* l}{V_i}}=\sum{\frac{Q_i* l_i}{A_i *l_i}}=\frac{Q}{A}
+		\end{equation*}
 		\subsection{Hystereseverhalten}
 		Die Hysteresekurve ist der Graph von $P$ gegen $E$ aufgetragen. 
 		Verschiedene Arten von Isolatoren zeigen unterschiedliches Hystereseverhalten. Uns interessieren besonders die Isolatoren,
@@ -149,7 +151,7 @@
 	 \begin{equation}\label{eqn_wasauchimmer}
 	 	\frac{\partial \widehat{F}}{\partial P}(P,T,E)= -E +g_2 P+g_4 P^3=0 \Leftrightarrow P(g_2 +g_4 P^2)=0
 	 \end{equation}
-	 Da wir ein Ferroelektrikum betrachten, gehen wir von $P \neq 0 $ aus. Außerdem wissen wir aus Experiementen, dass  $P \propto sqrt{T-t_0}$
+	 Da wir ein Ferroelektrikum betrachten, gehen wir von $P \neq 0 $ aus. Außerdem wissen wir aus Experiementen, dass  $P \propto \sqrt{T-T_0}$
 	 \begin{figure}[H]
 	 \center\includegraphics[width=275pt, height=165pt]{Wurzel}
 	 \caption{Abhängigkeit von P von $T_0$ und $T$}
@@ -313,4 +315,20 @@
 		\label{img_wechselstrombruecke}
 		\end{figure}
 		\chapter{Auswertung}
+		Affen lesen keine pilosophischen Texte? Doch, sie verstehen sie nur nicht.
+		\section{Verhalten der Kurve bei unterschiedlicher Spannung/Frequenz}
+		Hat man den vorrangehenden Text gelesen, so konnte man leicht verifizieren, dass dieser von einen kompletten Trottel verfasst worden ist.
+		Nichts destotrotz, wollen wir versuchen das Niveau konstant zu halten und die Dichte des Unsinns nicht unter einen bestimmten Wert fallen zu 
+		lassen.
+		Wir wollen zunächst die Abhängigkeit der Hysteresekurve von der Frequenz betrachten. Da der komplexe Widerstand des Ferroelektrikums und des 
+		Vergleichskondensators bei kleinen Frequenzen sehr groß wird, ist es messtechnisch sinnvoll nicht unter eine gewissen Frequenz zu gehen. In unserem 		Fall haben wir entschieden, dass wir Frequenzen verwenden, die größer sind zwei Hz.  Außerdem wählen wir Claus zu unserem Anführer.
+		Ich hab' doch eine Destinationfolder gechoost, dass heißt natürlich Dostinationsfolder.	Außerdem ist die Hysteresekurve schmaler für größere 
+		Frequenzen.
+		Die Spannung und damit das elektrische Feld sollte maximal gewählt werden, damit sichergestellt werden kann, dass die Polarisationssättigung
+		erreicht wird.
+		Im Fall eines Ferroelektrikums bedeutet das, dass nachdem die Polarisationssättigung erreicht worden ist, die Polarisation noch linear steigt.
+		\begin{figure}[htb]
+		\center \includegraphics{{2Hz, 0.85V}.png}
+		\end{figure}
+		
 \end{document}
