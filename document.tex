@@ -167,10 +167,16 @@
 	 Für Temperaturen oberhalb der Curie-Temperatur, kann man annehmen, dass P klein ist, also können die Terme mit $P^4$ und $P^6$ vernachlässigt 
 	 werden. Außerdem muss die innere Energie $\widehat{F}(P,T,E)=0$ sein für ein angelegtes Feld E.
 	 Damit kommen wir zu der gewünschten Beziehung
-	 \begin{equation*}
+	 \begin{equation}\label{eqn_wichtig}
 	 E= \gamma (T-T_0) P
-	 \end{equation*}
-	 
+	 \end{equation}
+	 Ist $g_4$ positiv, so kann $g_6$ vernachlässigt werden. Nach \eqref{eqn_wasauchimmer} ohne äußeres Feld E erhalten wir mit der Beziehung aus
+	 \eqref{eqn_wichtig}, dass
+	 \begin{equation}\label{eqn_wichtig2}
+	 \gamma (T-T_0) P_S+g_4 P_S^3=0 \Rightarrow P_S=0 \text{ oder } P_S^2=\frac{\gamma (T-T_0)}{g_4}
+	 \end{equation}
+	 Die freie Landausche Energie hat also ein Minimum ohne äußeres Feld bei $P_S=\sqrt{\frac{\gamma (T-T_0)}{g_4}}$.
+	 Wir nennen $C=\frac{\gamma}{g_4}$
 	 \newpage	 
 	 	\section{Festk\"orpereigenschaften von TGS}
 		
@@ -317,18 +323,59 @@
 		\chapter{Auswertung}
 		Affen lesen keine pilosophischen Texte? Doch, sie verstehen sie nur nicht.
 		\section{Verhalten der Kurve bei unterschiedlicher Spannung/Frequenz}
-		Hat man den vorrangehenden Text gelesen, so konnte man leicht verifizieren, dass dieser von einen kompletten Trottel verfasst worden ist.
-		Nichts destotrotz, wollen wir versuchen das Niveau konstant zu halten und die Dichte des Unsinns nicht unter einen bestimmten Wert fallen zu 
-		lassen.
 		Wir wollen zunächst die Abhängigkeit der Hysteresekurve von der Frequenz betrachten. Da der komplexe Widerstand des Ferroelektrikums und des 
-		Vergleichskondensators bei kleinen Frequenzen sehr groß wird, ist es messtechnisch sinnvoll nicht unter eine gewissen Frequenz zu gehen. In unserem 		Fall haben wir entschieden, dass wir Frequenzen verwenden, die größer sind zwei Hz.  Außerdem wählen wir Claus zu unserem Anführer.
-		Ich hab' doch eine Destinationfolder gechoost, dass heißt natürlich Dostinationsfolder.	Außerdem ist die Hysteresekurve schmaler für größere 
-		Frequenzen.
+		Vergleichskondensators bei kleinen Frequenzen sehr groß wird, ist es messtechnisch sinnvoll nicht unter eine gewissen Frequenz zu gehen. In unserem 		Fall haben wir entschieden, dass wir Frequenzen verwenden, die größer sind als zwei Hz. Vergleicht man die Hysteresekurve in \ref{img_abb1} mit der 
+		Hysteresekurve in \ref{img_abb2}, so stellt man fest, dass der Knick der Kurve in \ref{img_abb1} kurz vor der Sättigung auftritt in \ref{img_abb2}
+		nicht mehr zu sehen ist. Außerdem sieht man, dass die Hysteresekurve für größere Frequenzen schmaler ist.
 		Die Spannung und damit das elektrische Feld sollte maximal gewählt werden, damit sichergestellt werden kann, dass die Polarisationssättigung
 		erreicht wird.
 		Im Fall eines Ferroelektrikums bedeutet das, dass nachdem die Polarisationssättigung erreicht worden ist, die Polarisation noch linear steigt.
-		\begin{figure}[htb]
+		Auch dies kann im Vergleich von \ref{img_abb1} und \ref{img_abb2} gesehen werden.
+		\begin{figure}
 		\center \includegraphics{{2Hz, 0.85V}.png}
+		\caption{Hysteresekurve für 2Hz und 0.85V}
+		\label{img_abb1}
 		\end{figure}
+		\begin{figure}
+		\center \includegraphics{{5Hz, 2.50V}.png}
+		\caption{Hysteresekurve für 5Hz und 2.50V}
+		\label{img_abb2}
+		\end{figure}
+		\begin{figure}
+		\center \includegraphics{ohne_XY.png}
+		\caption{X- und Y-Kurve geplottet gegen t für 2Hz und 0.85V}
+		\label{img_abb3}
+		\end{figure}
+		
+		\newpage
+		\section{Spontane Polarisation und statische Dielektrizitätskonstante}
+		\begin{figure}[h]
+		\center \includegraphics{{0 - Spontane Remanenz - Gerade}.png}
+		\caption{Spontane Polarisation geplottet gegen die Temperatur}
+		\label{img_spontaneP}
+		\end{figure}
+		\begin{equation*}
+		P(0)^2=0,171 \pm 0,006 \frac{C^2}{m^4} \quad m=-0,00371 \pm 0,00013 \frac{C^2}{m^4 °C} 
+		\end{equation*}
+		Wobei die Gradensteigung $C$ die Curie-Konstane ist. Möchte man den Wert der quadrierten Polarisation bei Raumtemperatur wissen, so kann diese sehr 
+		leicht wie folgt 
+		erechnet werden.
+		\begin{equation*}
+		P(20)^2=P(0)^2 + m *20°C= 0,0968 \pm 0,007 \frac{C^2}{m^4}
+		\end{equation*}
+		Damit erhält man für $P(20)=0,984 \pm 0,003 \frac{C^2}{m^4}$
+		Für die Curie-Temperatur findet man auf ähnlichem Wege
+		\begin{equation*}
+		T_C=\frac{-P(0)^2}{m}=46,09 \pm 2,43 °C
+		\end{equation*}
+		
+		
+		Aus dem obigen Plot erhählt man die Geradensteigung $m=(3,71 \pm 0,01)*10^{-5} \frac{P^2}{°K}$. Aus Jona Shirane wissen wir, dass $C$ in einer
+		Umgebung des Phasenübergangs einen $g_4$-Wert von 83,58 $P^2$ hat.
+		Die Formel zur Bestimmung von $C$ ist gegeben durch
+		\begin{equation*}
+		C=\frac{1}{g_4 m 4 \pi}=4052 \pm 11
+		\end{equation*}
+		
 		
 \end{document}
